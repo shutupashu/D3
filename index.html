@@ -284,8 +284,8 @@ function init_plots()
     {
         return color(d[2]);
     }
-    
-    document.querySelector("iframe").style.height = "1000px";
+    d3.select(self.frameElement).style("height", "1200px");
+    d3.select(self.frameElement).style("width", "1200px");
     init_code_hierarchy_plot("code_hierarchy",code_hierarchy_data,count_function,color_function,label_function,legend_function);
 }
 
