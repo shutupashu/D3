@@ -9,6 +9,11 @@ html
     font-size:1em;
 }
 
+body
+{
+    padding:10px;
+}
+
 form
 {
 
@@ -284,8 +289,7 @@ function init_plots()
     {
         return color(d[2]);
     }
-    d3.select(self.frameElement).style("height", "1200px");
-    d3.select(self.frameElement).style("width", "1200px");
+    d3.select(self.frameElement).style("height", "800px");
     init_code_hierarchy_plot("code_hierarchy",code_hierarchy_data,count_function,color_function,label_function,legend_function);
 }
 
@@ -297,7 +301,7 @@ window.onresize = init_plots;
 <script type="text/javascript" src="data.js"></script>
 </head>
 <body>
-    <p>Check out the full example <a href="http://www.andreas-dewes.de/code_is_beautiful">here</a>.</p>
+    <p>Check out the full example <a href="http://www.andreas-dewes.de/code_is_beautiful" target="_blank">here</a>.</p>
     <div id="code_hierarchy_legend">&nbsp;</div>
     <div id="code_hierarchy">&nbsp;</div>
 </body>
