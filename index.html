@@ -17,7 +17,7 @@ form
 #code_hierarchy
 {
     position:relative;
-    width:300px;
+    width:600px;
     margin:0 auto;
 }
 
@@ -285,17 +285,18 @@ function init_plots()
         return color(d[2]);
     }
     
+    document.querySelector("iframe").style.height = "1000px";
     init_code_hierarchy_plot("code_hierarchy",code_hierarchy_data,count_function,color_function,label_function,legend_function);
 }
 
 window.onload = init_plots;
 window.onresize = init_plots;
 
+
 </script>
 <script type="text/javascript" src="data.js"></script>
 </head>
 <body>
-    <h1>Hierarchical, zoomable pie chart</h1>
     <p>Check out the full example <a href="http://www.andreas-dewes.de/code_is_beautiful">here</a>.</p>
     <div id="code_hierarchy_legend">&nbsp;</div>
     <div id="code_hierarchy">&nbsp;</div>
